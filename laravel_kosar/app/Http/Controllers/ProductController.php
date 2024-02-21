@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\ProductType;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -34,4 +35,14 @@ class ProductController extends Controller
     public function destroy($id){
         Product::find($id)->delete();
     }
+    public function allProductType($type_id){
+        
+
+        $osszes= Product::with('prodactAll')
+        ->where('type_id', '=', $type_id)->get();
+        
+
+    
+    return $osszes;
+}
 }

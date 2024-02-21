@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Basket extends Model
 {
@@ -18,5 +19,7 @@ class Basket extends Model
 
         return $query;
     }
+
+   
 
 }

@@ -15,4 +15,9 @@ class Product extends Model
         'type_id',
         'date',
     ];
+    public function prodactAll()
+    {
+
+        return $this->belongsTo(ProductType::class, 'type_id', 'type_id');
+    }
 }
